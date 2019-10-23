@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+//import poison from './poison.jpg';
 import './App.css';
+import UserTable from './tables/UserTable';
+import AddSentenceForm from './forms/AddSentenceForm';
 
-function App() {
+const App = () => {
+
+
+  const sentencesData = [
+    {id: 1, input: 'You suck', prediction: '78%', emoji: String.fromCodePoint(0x1F614), label: 'toxic'}
+  ]
+
+  const [sentences, setSentences] = useState(sentencesData)
+
+  const addSentence = sentence => {
+    sentence.id = sentences.length + 1
+    setSentences([...sentences, sentence])
+  }
+
+  const deleteSentence = id => {
+    setSentences(sentences.filter(sentence => sentence.id !== id))
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Is it toxic?</h1>
+      <div className="flex-row">
+        <div className="flex-large">
+          <h2>Add sentence</h2>
+          <AddSentenceForm addSentence={addSentence} />
+        </div>
+        <div className="flex-large">
+          <h2>View sentences</h2>
+          <UserTable sentences={sentences} deleteSentence={deleteSentence} />
+        </div>
+      </div>
     </div>
-  );
+    
+  )
 }
 
-export default App;
+export default App
