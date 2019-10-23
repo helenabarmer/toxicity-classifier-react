@@ -17,6 +17,10 @@ Will detect if the sentence you write in the input contains toxic content.
 - [x] Add React
 - [ ] Use cases for a toxicity classifier
 
+## Inspiration 
+- [Build a CRUD App in React with Hooks](https://www.taniarascia.com/crud-app-in-react-with-hooks/)
+
+
 ## Learn More About React
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
