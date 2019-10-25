@@ -3,14 +3,16 @@ import React, { useState } from 'react';
 import './App.css';
 import UserTable from './tables/UserTable';
 import AddSentenceForm from './forms/AddSentenceForm';
+import Footer from './Footer.js';
+
 
 const App = () => {
 
+  // Example sentence with predicition and label
+  // Array of inputs will be added here
+  const sentencesData = [ {id: 1, input: 'You suck', prediction: '97%', emoji: String.fromCodePoint(0x1F614), label: 'TOXICITY'} ]
 
-  const sentencesData = [
-    {id: 1, input: 'You suck', prediction: '78%', emoji: String.fromCodePoint(0x1F614), label: 'toxic'}
-  ]
-
+  // Hook
   const [sentences, setSentences] = useState(sentencesData)
 
   const addSentence = sentence => {
@@ -24,19 +26,21 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Is it toxic?</h1>
-      <div className="flex-row">
-        <div className="flex-large">
+      <h1 id="is-it-toxic">Is it toxic?</h1>
+      <div className="sentences">
+        <div className="add-sentence">
           <h2>Add sentence</h2>
           <AddSentenceForm addSentence={addSentence} />
         </div>
-        <div className="flex-large">
+        <div className="view-sentence">
           <h2>View sentences</h2>
           <UserTable sentences={sentences} deleteSentence={deleteSentence} />
         </div>
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
     </div>
-    
   )
 }
 

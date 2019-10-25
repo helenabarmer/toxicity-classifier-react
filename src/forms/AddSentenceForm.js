@@ -25,16 +25,16 @@ const AddSentenceForm = props => {
             //let mathRoundPrediction = Math.round(prediction * 100);
             //let toxic = Math.round(probab * 100) +  "%";
                 
-            /*for(let pred of predictions){
+            for(let pred of predictions){
                 sentence.label = pred.label.toUpperCase() 
-                //console.log(pred.label); 
-           }*/
+                console.log(pred.label); 
+           }
     
-           if(isToxic || isToxic === null || sentence.input === "Donald Trump"){
+           if(isToxic || isToxic === null || sentence.input === "Donald Trump" || sentence.input === "Tobbe"){
 
             for(let pred of predictions){
                 sentence.label = pred.label.toUpperCase() 
-                //console.log(pred.label); 
+                console.log(pred.label); 
            }
 
             sentence.prediction = Math.round(probab * 100) +  "%"
@@ -43,7 +43,7 @@ const AddSentenceForm = props => {
             setSentence(initialFormState)
             //console.log("This is toxic!");
             //console.log("Probabilities for this being insulting " + isToxic);
-            //console.log(predictions);
+            console.log(predictions);
           }
           else{
 
@@ -58,26 +58,19 @@ const AddSentenceForm = props => {
             setSentence(initialFormState);
             //console.log("This is not toxic");
             //console.log(predictions);
-            
           }
-
-      
         });
       });
-
-      
     }
  
     const initialFormState = {id: 'null', input: '', predicition: '', emoji: '', label: ''}
+    
     const [sentence, setSentence] = useState(initialFormState)
     
-
     const handleInputChange = event => {
         const { name, value } = event.target
         setSentence({ ...sentence, [name]: value })
     }
-
-
 
     return (
         <form
@@ -88,7 +81,6 @@ const AddSentenceForm = props => {
             addModel()
         }}
         >
-            <label>Sentence</label>
             <input type="text" name="input" placeholder="Write a sentence here" value={sentence.input} onChange={handleInputChange} />
             <button>Check toxicity</button>
         </form>

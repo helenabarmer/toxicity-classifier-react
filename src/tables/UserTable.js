@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 const UserTable = props => (
     <table>
         <thead>
-            <tr>
+            <tr className="table-header">
                 <th>Sentence</th>
                 <th>% of toxicity</th>
                 <th> &#128532; / &#x1F60D; </th>
@@ -11,7 +12,8 @@ const UserTable = props => (
                 <th>Remove sentence</th>
             </tr>
         </thead>
-        <tbody>
+
+        <tbody id="inputs">
             {props.sentences.length > 0 ?(
                 props.sentences.map(sentence => (
                     <tr key={sentence.id}>
@@ -25,7 +27,7 @@ const UserTable = props => (
                     </tr>
                 ))
             ) : (
-                <tr>
+                <tr id="no-sentences">
                     <td colSpan={3}>No Sentences</td>
                 </tr>
             )}
