@@ -81,7 +81,7 @@ const AddSentenceForm = props => {
             addModel()
         }}
         >
-            <input type="text" name="input" placeholder="Write a sentence here" value={sentence.input} onChange={handleInputChange} />
+            <input id="input" type="text" name="input" placeholder="Write a sentence here" value={sentence.input} onChange={handleInputChange} />
             <button>Check toxicity</button>
         </form>
     )

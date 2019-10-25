@@ -19,23 +19,20 @@ body{
   height: auto;
   margin: 0;
   align-items: stretch;
-  
-  
 }
 
 .add-sentence{
-  
+  font-family: 'Courier New', Courier, monospace;
   float: left;
 }
 
-.view-sentence{
-  
-  float: right;
-  
-  
+#input{
+  font-family: 'Courier New', Courier, monospace;
 }
 
-
+.view-sentence{
+  float: right;
+}
 
 h1{
   color: #61DAFB;
@@ -63,7 +60,7 @@ input{
 }
 
 footer{
-  height: 30px;
+  height: 5px;
   bottom: 0;
   position: absolute;
   left: 0;
@@ -85,11 +82,14 @@ a{
 
 table{
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  border-collapse: collapse;
+ 
 }
 
 th, td{
-  border: 1px solid white;
-  
-
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 15px;
 }
 
