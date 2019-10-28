@@ -21,37 +21,48 @@ const AddSentenceForm = props => {
             probab = item.results[0].probabilities[1];});
             console.log("This is probab " + probab);
             
-    
+            
+              const arrayNiceWords = [
+                "Thank you for writing something nice", 
+                "That was nice of you", 
+                "You are a nice person",
+                "That is very kind of you",
+                "You are such a sweet person",
+                "Good karma is coming for you",
+                "Thank you",
+                "Keep on being wonderful",
+              ]
+              const randomNiceWords = arrayNiceWords[Math.floor(Math.random()*arrayNiceWords.length)]
+              //console.log("This is random" + random);
+              
             //let mathRoundPrediction = Math.round(prediction * 100);
             //let toxic = Math.round(probab * 100) +  "%";
                 
-            for(let pred of predictions){
-                sentence.label = pred.label.toUpperCase() 
-                console.log(pred.label); 
-           }
     
            if(isToxic || isToxic === null || sentence.input === "Donald Trump" || sentence.input === "Tobbe"){
-
+             
             for(let pred of predictions){
                 sentence.label = pred.label.toUpperCase() 
                 console.log(pred.label); 
            }
 
+            let pred;
+            predictions.forEach((item) => {
+            pred = item.label}
+            );
+            console.log("Test prediction" + pred);
+            
+           
             sentence.prediction = Math.round(probab * 100) +  "%"
             sentence.emoji = String.fromCodePoint(0x1F614)
             props.addSentence(sentence)
             setSentence(initialFormState)
             //console.log("This is toxic!");
             //console.log("Probabilities for this being insulting " + isToxic);
-            console.log(predictions);
+            //console.log(predictions);
           }
           else{
-
-            for(let pred of predictions){
-                sentence.label = pred.label.toUpperCase() 
-                //console.log(pred.label); 
-           }
-
+            sentence.label = randomNiceWords;
             sentence.prediction = Math.round(probab * 100) +  "%";
             sentence.emoji = String.fromCodePoint(0x1F60D);
             props.addSentence(sentence);
@@ -72,6 +83,7 @@ const AddSentenceForm = props => {
         setSentence({ ...sentence, [name]: value })
     }
 
+    
     return (
         <form
         onSubmit={event => {  
