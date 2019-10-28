@@ -1,47 +1,64 @@
 import React, { useState } from 'react';
 //import poison from './poison.jpg';
 import './App.css';
-import UserTable from './tables/UserTable';
+import ToxicTable from './tables/ToxicTable';
 import AddSentenceForm from './forms/AddSentenceForm';
-import Footer from './Footer.js';
+import Footer from './Footer.js'; 
 
 
 const App = () => {
 
-  // Example sentence with predicition and label
-  // Array of inputs will be added here
-  const sentencesData = [ {id: 1, input: 'You suck', prediction: '97%', emoji: String.fromCodePoint(0x1F614), label: 'TOXICITY'} ]
+  const sentenceData = [
+    { index: 1, sentence: 'Something you wrote here', prediction: "100%?", emoji: <span role="img" aria-label="skull">💀</span>, label: 'Hopefully not toxic', point: 0 }
+  ]
 
-  // Hook
-  const [sentences, setSentences] = useState(sentencesData)
+  const [sentences, setSentences] = useState(sentenceData);
 
-  const addSentence = sentence => {
-    sentence.id = sentences.length + 1
-    setSentences([...sentences, sentence])
+  const addSentence = input => {
+    input.index = sentences.length + 1;
+    setSentences([...sentences, input ])
   }
 
-  const deleteSentence = id => {
-    setSentences(sentences.filter(sentence => sentence.id !== id))
+  const deleteSentence = index => {
+    setSentences(sentences.filter(input => input.index !== index))
   }
+
+  const deleteAll = (index) => {
+    setSentences(sentences.filter(input => input.index.length !== index.length))
+    
+  }
+
+
 
   return (
-    <div className="container">
-      <h1 id="is-it-toxic">Is it toxic?</h1>
-      <div className="sentences">
-        <div className="add-sentence">
-          <h2>Add sentence</h2>
-          <AddSentenceForm addSentence={addSentence} />
+    <div className="App">
+      <h1>Are you toxic?</h1>
+      <div className="inputs">
+        <div className="InputForm">
+          <h2>Add your sentence here</h2>
+          <AddSentenceForm addSentence={addSentence}/>
         </div>
-        <div className="view-sentence">
+        <div className="ToxicTable">
           <h2>View sentences</h2>
-          <UserTable sentences={sentences} deleteSentence={deleteSentence} />
+          <ToxicTable sentences={sentences} deleteSentence={deleteSentence} deleteAll={deleteAll}/>
         </div>
         <div className="footer">
           <Footer />
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
+
+
+
+
+
+
+
+
+
+
+

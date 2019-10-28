@@ -93,3 +93,124 @@ th, td{
   padding: 15px;
 }
 
+body{
+  background-color: #2D2D2D;
+  color: #61DAFB;
+  
+  
+}
+
+#is-it-toxic{
+  text-align: left;
+
+}
+
+.sentences{
+  background-color: #2D2D2D;
+  color: #61DAFB;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: auto;
+  margin: 0;
+  align-items: stretch;
+}
+
+.add-sentence{
+  font-family: 'Courier New', Courier, monospace;
+  float: left;
+}
+
+#input{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.view-sentence{
+  float: right;
+}
+
+h1{
+  color: #61DAFB;
+}
+
+h2{
+  color: #61DAFB;
+}
+
+button{
+  color: rgb(0, 33, 43);
+  background-color:#61DAFB;
+}
+
+input{
+  color: red;
+}
+
+#no-sentences{
+  color: red;
+}
+
+#inputs{
+  color: red;
+}
+
+footer{
+  height: 5px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  width: 300px;
+  margin: auto;
+  line-height: 75px;
+  font-size: 15px; 
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  background-color: black;
+  color: black;
+  padding-bottom: 70px;
+}
+
+a{
+  margin-right: 40px;
+}
+
+table{
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  border-collapse: collapse;
+ 
+}
+
+th, td{
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding: 15px;
+}
+
+.inputs{
+  display: flex;
+  justify-content: space-around;
+}
+
+.InputForm{
+  float: left;
+  
+}
+
+.ToxicTable{
+  float: right;
+  
+}
+
+
+.input-sentence{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-around;
+
+}
+
+
+
