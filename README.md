@@ -13,12 +13,7 @@ Will detect if the sentence you write in the input contains toxic content.
 
 ## To-do
 - [x] Implement the pre-trained model in the code
-- [ ] Add tests
 - [x] Add React
-- [ ] Use cases for a toxicity classifier
-
-## Inspiration 
-- [Build a CRUD App in React with Hooks](https://www.taniarascia.com/crud-app-in-react-with-hooks/)
 
 
 ## Learn More About React
