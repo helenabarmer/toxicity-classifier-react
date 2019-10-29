@@ -2,7 +2,6 @@ import React from 'react'
 
 
 const ToxicTable = (props) => (
-
         <table>
             <thead>
             <tr>

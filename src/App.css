@@ -1,25 +1,11 @@
 body{
-  background-color: #2D2D2D;
-  color: #61DAFB;
-  
-  
+  background-image: url('./poison.jpg');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
 }
 
-#is-it-toxic{
-  text-align: left;
-
-}
-
-.sentences{
-  background-color: #2D2D2D;
-  color: #61DAFB;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: auto;
-  margin: 0;
-  align-items: stretch;
-}
 
 .add-sentence{
   font-family: 'Courier New', Courier, monospace;
@@ -30,13 +16,17 @@ body{
   font-family: 'Courier New', Courier, monospace;
 }
 
-.view-sentence{
-  float: right;
+#h1{
+  color: #61DAFB;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  border: 2px solid #61DAFB;
+  background-color: black;
+  border-radius: 5px;
+  width: 400px;
 }
 
-h1{
-  color: #61DAFB;
-}
 
 h2{
   color: #61DAFB;
@@ -45,172 +35,135 @@ h2{
 button{
   color: rgb(0, 33, 43);
   background-color:#61DAFB;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
 }
 
-input{
-  color: red;
-}
-
-#no-sentences{
-  color: red;
-}
 
 #inputs{
   color: red;
 }
 
-footer{
-  height: 5px;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  width: 300px;
-  margin: auto;
-  line-height: 75px;
-  font-size: 15px; 
-  display: flex;
-  justify-content: center;
-  margin-left: 10px;
-  background-color: black;
-  color: black;
-  padding-bottom: 70px;
-}
-
-a{
-  margin-right: 40px;
-}
-
-table{
-  font-family: 'Courier New', Courier, monospace;
-  text-align: center;
-  border-collapse: collapse;
- 
-}
-
-th, td{
-  text-align: center;
-  border-bottom: 1px solid grey;
-  padding: 15px;
-}
-
-body{
-  background-color: #2D2D2D;
-  color: #61DAFB;
-  
-  
-}
-
-#is-it-toxic{
-  text-align: left;
-
-}
-
-.sentences{
-  background-color: #2D2D2D;
-  color: #61DAFB;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  height: auto;
-  margin: 0;
-  align-items: stretch;
-}
-
-.add-sentence{
-  font-family: 'Courier New', Courier, monospace;
-  float: left;
-}
 
 #input{
-  font-family: 'Courier New', Courier, monospace;
-}
-
-.view-sentence{
-  float: right;
-}
-
-h1{
-  color: #61DAFB;
-}
-
-h2{
-  color: #61DAFB;
-}
-
-button{
-  color: rgb(0, 33, 43);
-  background-color:#61DAFB;
-}
-
-input{
   color: red;
+  width: 400px;
+  height: 20px;
 }
 
-#no-sentences{
-  color: red;
-}
-
-#inputs{
-  color: red;
-}
 
 footer{
-  height: 5px;
-  bottom: 0;
-  position: absolute;
-  left: 0;
-  width: 300px;
+  height: auto;
   margin: auto;
-  line-height: 75px;
+  line-height: 60px;
   font-size: 15px; 
-  display: flex;
-  justify-content: center;
-  margin-left: 10px;
   background-color: black;
-  color: black;
-  padding-bottom: 70px;
+  color: rgb(207, 18, 18);
+  border-radius: 15px;
+  border: 2px solid red;
+  display: flex;
+  background-color: black;
+  color: rgb(233, 14, 14);
+  flex-direction: row;
+  float: right;
+  align-items: center;
+  bottom: 0;
 }
 
 a{
-  margin-right: 40px;
+  margin-right: 10px;
+  margin-left: 10px;
+  color: red;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+a:hover {
+  color: blue;
+}
+
+a:active {
+  color: yellow;
 }
 
 table{
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   border-collapse: collapse;
- 
 }
 
 th, td{
   text-align: center;
   border-bottom: 1px solid grey;
   padding: 15px;
+  background-color: black;
+}
+
+
+.Poison {   
+  background-image: url(./poison.jpg); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: cross-fade();
 }
 
 .inputs{
+  margin: 100px;
+  padding: 100px;
   display: flex;
   justify-content: space-around;
+  
+  
+  font-family: 'Courier New', Courier, monospace;
+  border: 2px solid #61DAFB;
+  border-radius: 5px;
+  background-image: url(./poison.jpg); 
+  background-position: center;
+  background-size: cover;
+
+
+}
+.InputForm{
+  
+
 }
 
-.InputForm{
-  float: left;
+
+#check{
+  background-color: black;
+  width: 200px;
+}
+
+#view{
+  background-color: black;
+  text-align: center;
+  width: 300px;
   
+}
+
+#toxic-points{
+  color: yellow;
+  font-size: 25px;
+  background-color: black;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  text-align: center;
 }
 
 .ToxicTable{
-  float: right;
+  
+  color: #61DAFB;
   
 }
 
-
-.input-sentence{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-around;
-
+#show-sentence{
+  background-color: black;
+  color: red;
+  margin: auto;
+  width: auto;
 }
+
 
 
 

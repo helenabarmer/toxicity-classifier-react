@@ -1,19 +1,40 @@
 import React from 'react'
 
-const Footer = props =>{
+const Footer = () =>{
 
     return(
         
-        <footer>
+        <footer className="footer">
+
+            
+
+            <div>
+                <a href="https://github.com/helenabarmer/toxicity-classifier-react">Source code</a>
+            </div>
+
+            <div>
+                <a href="https://kaggle.com">Dataset</a>
+            </div>
+
+            <div>
+                <a href="https://kaggle.com">Tensorflow.js</a>
+            </div>
+
+
             <div>
                 <a href="mailto:helena.barmer@gmail.com" rel="noopener noreferrer">
                     <i className="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
             </div>
 
+            
+
             <div>
                 <a href="https://www.linkedin.com/in/helenabarmer/" rel="noopener noreferrer" target="_blank">
                     <i className="fa fa-linkedin-square fa-2x" aria-hidden="true"></i>
             </a></div>
+
+          
+
 
             <div>
                 <a href="https://github.com/helenabarmer/toxicity-classifier-react" rel="noopener noreferrer" target="blank">

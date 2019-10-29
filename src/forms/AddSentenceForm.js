@@ -69,7 +69,7 @@ const AddSentenceForm = (props) => {
               props.addSentence(input)
               setInput(initialFormState)
               //console.log("This is toxic!");
-              //console.log("Probabilities for this being insulting " + isToxic);
+              console.log("Probabilities for this being insulting " + isToxic);
               console.log(predictions);
               }
 
@@ -82,7 +82,7 @@ const AddSentenceForm = (props) => {
               props.addSentence(input);
               setInput(initialFormState);
               //console.log("This is not toxic");
-              //console.log(predictions);
+              console.log(predictions);
           }
         });
       });
@@ -98,7 +98,7 @@ const AddSentenceForm = (props) => {
     const onSubmitEvent = event => {
         event.preventDefault()
         
-        // If no input return 
+        // If no input, return 
         if(!input.sentence)return
 
         // Add toxic classifier model to table
@@ -111,17 +111,18 @@ const AddSentenceForm = (props) => {
       setCount(count - count);
     }
 
-   
     return(
         <div className="input-form">
             <form onSubmit={onSubmitEvent}>
-            <input type="text" autoComplete="off" placeholder="Think about your karma" name="sentence" value={input.sentence} onChange={handleInput} />
+            <input id="input" type="text" autoComplete="off" placeholder="Think about your karma" name="sentence" value={input.sentence} onChange={handleInput} />
             <button>Check if your sentence is toxic!</button> 
             </form>
            <div className="input-sentence">
-                <h2>{input.sentence}</h2>
+                <h2 id="show-sentence">{input.sentence}</h2>
+            <div className="toxic-form">
                 <h2 id="toxic-points">Toxic Points: {count}</h2>
                 <button type="reset" onClick={onClickReset}>Reset Toxic Points</button>
+              </div>
             </div>
         </div>
     )
