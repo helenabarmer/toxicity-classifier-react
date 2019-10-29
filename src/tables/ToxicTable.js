@@ -11,7 +11,7 @@ const ToxicTable = (props) => (
                 <th>% of toxicity</th>
                 <th><span role="img" aria-label="skull-and-love">💀 / 😍</span></th>
                 <th>Label</th>
-                <th>Karma points</th>
+                <th>Toxic points</th>
                 <th>Delete</th>
             </tr>
             </thead>

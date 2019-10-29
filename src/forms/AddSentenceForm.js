@@ -12,6 +12,7 @@ const AddSentenceForm = (props) => {
     
     // Adding pre-trained model from tensorflow.js
     const addModel = () =>{
+
       // Only probabilites above 90%
       const threshold = 0.9
 
@@ -63,6 +64,8 @@ const AddSentenceForm = (props) => {
 
               input.prediction = Math.round(probab * 100) +  "%"
               input.emoji = <span role="img" aria-label="skull">💀</span>
+              input.point = 1;
+              setCount(count + 1);
               props.addSentence(input)
               setInput(initialFormState)
               //console.log("This is toxic!");
@@ -76,8 +79,6 @@ const AddSentenceForm = (props) => {
               input.prediction = Math.round(probab * 100) +  "%";
               input.emoji = <span role="img" aria-label="love">😍</span>
               input.label = randomNiceWords;
-              input.point = 1;
-              setCount(count + 1);
               props.addSentence(input);
               setInput(initialFormState);
               //console.log("This is not toxic");
@@ -97,8 +98,10 @@ const AddSentenceForm = (props) => {
     const onSubmitEvent = event => {
         event.preventDefault()
         
+        // If no input return 
         if(!input.sentence)return
 
+        // Add toxic classifier model to table
         addModel()
     }
 
@@ -117,14 +120,15 @@ const AddSentenceForm = (props) => {
             </form>
            <div className="input-sentence">
                 <h2>{input.sentence}</h2>
-                <h2 id="karma-points">Karma Points: {count}</h2>
-                <button type="reset" onClick={onClickReset}>Reset Karma Points</button>
+                <h2 id="toxic-points">Toxic Points: {count}</h2>
+                <button type="reset" onClick={onClickReset}>Reset Toxic Points</button>
             </div>
         </div>
     )
 }
 
 export default AddSentenceForm
+
 
 
 
