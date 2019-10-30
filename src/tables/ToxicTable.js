@@ -5,10 +5,10 @@ const ToxicTable = (props) => (
         <table>
             <thead>
             <tr>
-                <th>No</th>
+                
                 <th>Your sentence</th>
                 <th>% of toxicity</th>
-                <th><span role="img" aria-label="skull-and-love">💀 / 😍</span></th>
+                <th><span role="img" aria-label="skull-and-love"> 💀/😍</span></th>
                 <th>Label</th>
                 <th>Toxic points</th>
                 <th>Delete a sentence</th>
@@ -18,7 +18,6 @@ const ToxicTable = (props) => (
             <tbody>
                     {props.sentences.map((input) => (
                         <tr key={input.index > 0 ? input.index : null}>
-                            <td>{input.index}</td>
                             <td>{input.sentence}</td>
                             <td>{input.prediction}</td>
                             <td><h2>{input.emoji}</h2></td>

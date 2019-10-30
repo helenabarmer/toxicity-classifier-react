@@ -27,6 +27,8 @@ body{
   background-color: black;
   border-radius: 5px;
   width: 400px;
+  margin: 20px;
+  padding: 10px;
 }
 
 
@@ -70,6 +72,7 @@ footer{
   float: right;
   align-items: center;
   bottom: 0;
+  margin: 12px;
 }
 
 a{
@@ -90,11 +93,9 @@ a:active {
 
 table{
   font-family: 'Courier New', Courier, monospace;
-  text-align: center;
 }
 
 th, td{
-  text-align: center;
   border-bottom: 1px solid grey;
   padding: 15px;
   background-color: black;
@@ -103,8 +104,8 @@ th, td{
 
 
 .inputs{
-  margin: 30px;
-  
+  margin: 20px;
+  padding: 10px;
   display: flex;
   font-family: 'Courier New', Courier, monospace;
   border: 2px solid #61DAFB;
