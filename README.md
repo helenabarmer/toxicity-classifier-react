@@ -2,12 +2,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Toxicity classifier
 Toxicity classifier from tensorflow.js.
-Will detect if the sentence you write in the input contains toxic content.
+Will detect if the sentence you write in the input contains toxic content. 
+Live demo can be found [here](https://react-toxicity-classifier.herokuapp.com/).
 
 
 ## Dataset
 
-[**Toxic Comment Classification Challenge from Kaggle**](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
+- [**Dataset: Toxic Comment Classification Challenge from Kaggle**](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
 
 | Labels        | 
 | ------------- | 
@@ -28,7 +29,7 @@ Will detect if the sentence you write in the input contains toxic content.
 - [x] Add React
 
 ## Deployment
-Deployed to [Heroku](https://www.heroku.com), explore react app [here](https://react-toxicity-classifier.herokuapp.com/).
+Deployed to [Heroku](https://www.heroku.com), check it out [here](https://react-toxicity-classifier.herokuapp.com/).
 
 
 ## Learn More About React
