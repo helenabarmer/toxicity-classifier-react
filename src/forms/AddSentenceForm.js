@@ -94,6 +94,8 @@ const AddSentenceForm = (props) => {
         setInput({...input, [name]: value});
     }
 
+    const resetForm = () =>{setInput(initialFormState)};
+
     // Submit model, if no input nothing adds to the table
     const onSubmitEvent = event => {
         event.preventDefault()
@@ -113,16 +115,19 @@ const AddSentenceForm = (props) => {
 
     return(
         <div className="input-form">
+           <div className="input-sentence">
+                <h2 id="show-sentence">{input.sentence}</h2>
+            </div>
             <form onSubmit={onSubmitEvent}>
             <input id="input" type="text" autoComplete="off" placeholder="Think about your karma" name="sentence" value={input.sentence} onChange={handleInput} />
             <button>Check if your sentence is toxic!</button> 
             </form>
-           <div className="input-sentence">
-                <h2 id="show-sentence">{input.sentence}</h2>
+            
+            <button id="reset-input" onClick={resetForm}>Reset input</button>
+          
             <div className="toxic-form">
                 <h2 id="toxic-points">Toxic Points: {count}</h2>
                 <button type="reset" onClick={onClickReset}>Reset Toxic Points</button>
-              </div>
             </div>
         </div>
     )

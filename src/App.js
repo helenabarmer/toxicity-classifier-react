@@ -11,8 +11,6 @@ import Footer from './Footer.js';
 
 const App = () => {
 
-  
-
   const sentenceData = [
     { index: 1, sentence: 'Something you wrote here', prediction: "100%?", emoji: <span role="img" aria-label="skull">💀</span>, label: 'Hopefully not toxic', point: 0 }
   ]
@@ -38,15 +36,14 @@ const App = () => {
        <div className="footer">
        <Footer />
        </div>
-      <h1 id="h1">Are you toxic?</h1>
+    
      
       <div className="inputs">
         <div className="InputForm">
-          <h2 id="check">Add sentence</h2>
+          <h2 id="check">Add a sentence</h2>
           <AddSentenceForm addSentence={addSentence}/>
         </div>
         <div className="ToxicTable">
-          <h2 id="view">View sentences</h2>
           <ToxicTable sentences={sentences} deleteSentence={deleteSentence} deleteAll={deleteAll}/>
         </div>
         </div>

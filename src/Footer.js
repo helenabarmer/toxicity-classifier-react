@@ -9,15 +9,15 @@ const Footer = () =>{
             
 
             <div>
-                <a href="https://github.com/helenabarmer/toxicity-classifier-react">Source code</a>
+                <a href="https://github.com/helenabarmer/toxicity-classifier-react" rel="noopener noreferrer" target="_blank">Source code</a>
             </div>
 
             <div>
-                <a href="https://kaggle.com">Dataset</a>
+                <a href="https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data" rel="noopener noreferrer" target="_blank">Dataset</a>
             </div>
 
             <div>
-                <a href="https://kaggle.com">Tensorflow.js</a>
+                <a href="https://github.com/tensorflow/tfjs-models" rel="noopener noreferrer" target="_blank">Tensorflow.js</a>
             </div>
 
 
@@ -37,7 +37,7 @@ const Footer = () =>{
 
 
             <div>
-                <a href="https://github.com/helenabarmer/toxicity-classifier-react" rel="noopener noreferrer" target="blank">
+                <a href="https://github.com/helenabarmer" rel="noopener noreferrer" target="blank">
                     <i className="fa fa-github fa-2x" aria-hidden="true"></i></a>
             </div>
 
