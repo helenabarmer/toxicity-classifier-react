@@ -7,6 +7,8 @@ Will detect if the sentence you write in the input contains toxic content.
 
 ## Dataset
 
+[**Toxic Comment Classification Challenge from Kaggle**](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
+
 | Labels        | 
 | ------------- | 
 | toxic         | 
@@ -15,9 +17,6 @@ Will detect if the sentence you write in the input contains toxic content.
 | threat        | 
 | insult        | 
 | identity_hate | 
-
-
-[**Toxic Comment Classification Challenge from Kaggle**](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data)
 
 
 ## Tensorflow.js
@@ -29,7 +28,7 @@ Will detect if the sentence you write in the input contains toxic content.
 - [x] Add React
 
 ## Deployment
-Deployed to [Heroku](https://www.heroku.com), explore it [here](https://react-toxicity-classifier.herokuapp.com/).
+Deployed to [Heroku](https://www.heroku.com), explore react app [here](https://react-toxicity-classifier.herokuapp.com/).
 
 
 ## Learn More About React
