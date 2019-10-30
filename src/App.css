@@ -1,9 +1,11 @@
 body{
-  background-image: url('./poison.jpg');
+  background-image: url('./mamba.jpeg');
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
- 
+  background-size: auto;
+  background-attachment: fixed;
+  display: flex;
+  
 }
 
 
@@ -29,12 +31,12 @@ body{
 
 
 h2{
-  color: #61DAFB;
+  color:  rgb(65, 240, 22);
 }
 
 button{
   color: rgb(0, 33, 43);
-  background-color:#61DAFB;
+  background-color: red;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 20px;
 }
@@ -89,7 +91,6 @@ a:active {
 table{
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
-  border-collapse: collapse;
 }
 
 th, td{
@@ -100,33 +101,34 @@ th, td{
 }
 
 
-.Poison {   
-  background-image: url(./poison.jpg); 
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: cross-fade();
-}
 
 .inputs{
-  margin: 100px;
-  padding: 100px;
+  margin: 30px;
+  
   display: flex;
-  justify-content: space-around;
-  
-  
   font-family: 'Courier New', Courier, monospace;
   border: 2px solid #61DAFB;
   border-radius: 5px;
-  background-image: url(./poison.jpg); 
+  background-image: url(./mamba.jpeg); 
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 
+  justify-content: space-between;
 
 }
-.InputForm{
-  
 
+.InputForm{
+  margin: 10px;
+  padding: 10px;
+ 
+
+}
+
+.ToxicTable{
+  margin: 10px;
+  padding: 10px;
+  color: rgb(65, 240, 22);
 }
 
 
@@ -151,15 +153,13 @@ th, td{
   text-align: center;
 }
 
-.ToxicTable{
-  
-  color: #61DAFB;
-  
-}
+
 
 #show-sentence{
-  background-color: black;
-  color: red;
+  background-color: rgb(65, 240, 22);
+  color: black;
+  font-weight: bolder;
+  font-size: 20px;
   margin: auto;
   width: auto;
 }
