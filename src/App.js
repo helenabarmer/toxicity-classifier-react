@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
-//import poison from './poison.jpg';
-// <img src={poison} alt="Poison" />
 import './App.css';
 import ToxicTable from './tables/ToxicTable';
 import AddSentenceForm from './forms/AddSentenceForm';
 import Footer from './Footer.js'; 
-
-
 
 
 const App = () => {
@@ -36,8 +32,6 @@ const App = () => {
        <div className="footer">
        <Footer />
        </div>
-    
-     
       <div className="inputs">
         <div className="InputForm">
           <h2 id="check">Add a sentence</h2>

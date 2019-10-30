@@ -120,10 +120,10 @@ const AddSentenceForm = (props) => {
             </div>
             <form onSubmit={onSubmitEvent}>
             <input id="input" type="text" autoComplete="off" placeholder="Think about your karma" name="sentence" value={input.sentence} onChange={handleInput} />
-            <button>Check if your sentence is toxic!</button> 
+            <button>Check if your sentence is toxic</button> 
             </form>
             
-            <button id="reset-input" onClick={resetForm}>Reset input</button>
+            <button id="reset-input" onClick={resetForm}>Clear input</button>
           
             <div className="toxic-form">
                 <h2 id="toxic-points">Toxic Points: {count}</h2>
