@@ -1,7 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Toxicity classifier
+The React Toxicity Classifier is importing a pre-trained model from [tensorFlow.js](https://github.com/tensorflow/tfjs-models). The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Toxicity classifier
-The React Toxicity Classifier is importing a pre-trained model from [tensorFlow.js](https://github.com/tensorflow/tfjs-models). The pre-trained model is a [toxicity classifier](https://github.com/tensorflow/tfjs-models/tree/master/toxicity) that will detect if the text you write in the input field is classified within 7 different labels:
+### Labels
+The pre-trained model is a [toxicity classifier](https://github.com/tensorflow/tfjs-models/tree/master/toxicity) that will detect if the text you write in the input field is classified within 7 different labels:
 
 | Labels        | 
 | ------------- |      
@@ -12,23 +13,31 @@ The React Toxicity Classifier is importing a pre-trained model from [tensorFlow.
 | insult        | 
 | identity_hate | 
 
-- The toxicity classifier will return a true (is toxic) or false (not toxic) depending on the input sentence. 
-- The sentence in the input field is submitted through a button. 
+The toxicity classifier will return a true (is toxic) or false (not toxic) depending on the input sentence. 
+
+### Input field
+- The sentence in the input field is submitted through a button and then sent to the pre-trained model.
 - The input field can be cleared through a button.
+
+### Toxic points
 - For every sentence that is labelled true (within the 7 different labels) a toxic point will be added underneath the input field.
 - There is a button that will clear the toxic points.
-- A submitted sentence will be displayed in the table with the following information: 
-> -How much % of toxicity the sentence contains
-> -An emoji that will switch between a happy one and a skull
-> -Toxic points that will increase every time the input sentence is labelled “true”
-> -A button to delete one sentence at a time
-> -A button to delete all sentences from the table
-- At the top of the page the following links are displayed:
-> -Source code
-> -Dataset
-> -Toxicity classifier
-> -Tensorflow.js
-> -Contact information: E-mail, LinkedIn and GitHub
+
+### Table
+A submitted sentence will be displayed in the table with the following information: 
+- How much % of toxicity the sentence contains
+- An emoji that will switch between a happy one and a skull
+- Toxic points that will increase every time the input sentence is labelled “true”
+- A button to delete one sentence at a time
+- A button to delete all sentences from the table
+
+### Footer
+At the top of the page the following links are displayed:
+- Source code
+- Dataset
+- Toxicity classifier
+- Tensorflow.js
+- Contact information: E-mail, LinkedIn and GitHub
 
 
 ## Dataset
