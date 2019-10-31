@@ -5,6 +5,8 @@ import * as toxicity from '@tensorflow-models/toxicity'
 const AddSentenceForm = (props) => {
 
     const initialFormState = { index: null, sentence: '', predicition: '', emoji: '', label: '', point: 0 }
+
+    // State variable 
     const [input, setInput] = useState(initialFormState);
     
     // Counter for Karma Points
@@ -16,6 +18,7 @@ const AddSentenceForm = (props) => {
       // Only probabilites above 90%
       const threshold = 0.9
 
+      // Load pre-trained model from tensorflow.js
       toxicity.load(threshold).then(model => {
 
         model.classify([input.sentence]).then(predictions => {
@@ -46,28 +49,22 @@ const AddSentenceForm = (props) => {
             
             // Random display of array
             const randomNiceWords = arrayNiceWords[Math.floor(Math.random()*arrayNiceWords.length)]
-            
-            // Labels in dataset
-            for(let pred of predictions){
-                input.label = pred.label.toUpperCase() 
-                console.log("Labels" + pred.label); 
-                }
 
             // If matches "true" (sentence is toxic)
             if(isToxic || isToxic === null || input.sentence === "Donald Trump" || input.sentence === "Tobbe"){
 
-
+              // Labels in dataset, display label in table
               for(let pred of predictions){
                 input.label = pred.label.toUpperCase() 
-                console.log(pred.label); 
+                console.log("Label " + pred.label); 
               }
 
-              input.prediction = Math.round(probab * 100) +  "%"
-              input.emoji = <span role="img" aria-label="skull">💀</span>
-              input.point = 1;
-              setCount(count + 1);
-              props.addSentence(input)
-              setInput(initialFormState)
+              input.prediction = Math.round(probab * 100) +  "%" // Predictions in %
+              input.emoji = <span role="img" aria-label="skull">💀</span> //Emoji displayed
+              input.point = 1; // Point set to 1 if the sentence is toxic
+              setCount(count + 1); // Set count to point + 1 if toxic
+              props.addSentence(input) // Add sentence to table
+              setInput(initialFormState) // Set state
               //console.log("This is toxic!");
               console.log("Probabilities for this being insulting " + isToxic);
               console.log(predictions);
@@ -75,12 +72,11 @@ const AddSentenceForm = (props) => {
 
             // Match is false (sentence is not toxic)  
             else{
-
               input.prediction = Math.round(probab * 100) +  "%";
               input.emoji = <span role="img" aria-label="love">😍</span>
-              input.label = randomNiceWords;
-              props.addSentence(input);
-              setInput(initialFormState);
+              input.label = randomNiceWords; // Random sentence from array instead of label
+              props.addSentence(input); // Add sentence to table
+              setInput(initialFormState); // Set state
               //console.log("This is not toxic");
               console.log(predictions);
           }
@@ -93,7 +89,8 @@ const AddSentenceForm = (props) => {
         const {name, value} = event.target;
         setInput({...input, [name]: value});
     }
-
+    
+    // Clear input field
     const resetForm = () =>{setInput(initialFormState)};
 
     // Submit model, if no input nothing adds to the table
