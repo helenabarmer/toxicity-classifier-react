@@ -1,7 +1,9 @@
 ![logo](https://github.com/helenabarmer/toxicity-classifier-react/blob/master/heroku.png)
 
 # React Toxicity classifier
-The React Toxicity Classifier is importing a pre-trained model from [tensorFlow.js](https://github.com/tensorflow/tfjs-models). The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The React Toxicity Classifier is importing a pre-trained model from [tensorFlow.js](https://github.com/tensorflow/tfjs-models).
+
+The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### Labels
 The pre-trained model is a [toxicity classifier](https://github.com/tensorflow/tfjs-models/tree/master/toxicity) that will detect if the text you write in the input field is classified within 7 different labels:
@@ -23,13 +25,13 @@ The toxicity classifier will return a true (is toxic) or false (not toxic) depen
 
 ### Toxic points
 - For every sentence that is labelled true (within the 7 different labels) a toxic point will be added underneath the input field.
-- There is a button that will clear the toxic points.
+- There is a button that can clear the toxic points.
 
 ### Table
 A submitted sentence will be displayed in the table with the following information: 
 - How much % of toxicity the sentence contains
-- An emoji that will switch between a happy one and a skull
-- Toxic points that will increase every time the input sentence is labelled “true”
+- An emoji that will switch between a happy one/love eyes (not toxic) and a skull (toxic)
+- Toxic points that will increase every time the input sentence is labelled “true” (toxic)
 - A button to delete one sentence at a time
 - A button to delete all sentences from the table
 
