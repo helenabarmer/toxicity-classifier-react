@@ -18,17 +18,17 @@ The React Toxicity Classifier is importing a pre-trained model from [tensorFlow.
 - For every sentence that is labelled true (within the 7 different labels) a toxic point will be added underneath the input field.
 - There is a button that will clear the toxic points.
 - A submitted sentence will be displayed in the table with the following information: 
--- How much % of toxicity the sentence contains
--- An emoji that will switch between a happy one and a skull
---Toxic points that will increase every time the input sentence is labelled “true”
--- A button to delete one sentence at a time
--- A button to delete all sentences from the table
+> How much % of toxicity the sentence contains
+> An emoji that will switch between a happy one and a skull
+> Toxic points that will increase every time the input sentence is labelled “true”
+> A button to delete one sentence at a time
+> A button to delete all sentences from the table
 - At the top of the page the following links are displayed:
--- Source code
--- Dataset
--- Toxicity classifier
--- Tensorflow.js
--- Contact information: E-mail, LinkedIn and GitHub
+> Source code
+> Dataset
+> Toxicity classifier
+> Tensorflow.js
+> Contact information: E-mail, LinkedIn and GitHub
 
 
 ## Dataset
