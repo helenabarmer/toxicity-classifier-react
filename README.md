@@ -1,3 +1,5 @@
+![logo](https://github.com/helenabarmer/toxicity-classifier-react/blob/master/heroku.png)
+
 # React Toxicity classifier
 The React Toxicity Classifier is importing a pre-trained model from [tensorFlow.js](https://github.com/tensorflow/tfjs-models). The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
